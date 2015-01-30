@@ -1,0 +1,110 @@
+{
+  "results" : [ {
+    "dateModification" : "2015-01-29T09:00:00Z",
+    "min" : 8.0,
+    "max" : 30.0,
+    "sum" : 142.0,
+    "count" : 8,
+    "avg" : 17.75
+  }, {
+    "dateModification" : "2015-01-29T10:00:00Z",
+    "min" : 8.0,
+    "max" : 10.0,
+    "sum" : 102.0,
+    "count" : 6,
+    "avg" : 17.0
+  }, {
+    "dateModification" : "2015-01-29T11:00:00Z",
+    "min" : 8.0,
+    "max" : 12.0,
+    "sum" : 102.0,
+    "count" : 6,
+    "avg" : 17.0
+  }, {
+    "dateModification" : "2015-01-29T12:00:00Z",
+    "min" : 8.0,
+    "max" : 12.0,
+    "sum" : 102.0,
+    "count" : 6,
+    "avg" : 17.0
+  }, {
+    "dateModification" : "2015-01-29T13:00:00Z",
+    "min" : 8.0,
+    "max" : 12.0,
+    "sum" : 102.0,
+    "count" : 6,
+    "avg" : 17.0
+  }, {
+    "dateModification" : "2015-01-29T14:00:00Z",
+    "min" : 8.0,
+    "max" : 12.0,
+    "sum" : 102.0,
+    "count" : 6,
+    "avg" : 17.0
+  }, {
+    "dateModification" : "2015-01-29T15:00:00Z",
+    "min" : 1.0,
+    "max" : 12.0,
+    "sum" : 103.0,
+    "count" : 7,
+    "avg" : 14.714286
+  }, {
+    "dateModification" : "2015-01-29T16:00:00Z",
+    "min" : 8.0,
+    "max" : 10.0,
+    "sum" : 102.0,
+    "count" : 6,
+    "avg" : 17.0
+  }, {
+    "dateModification" : "2015-01-29T17:00:00Z",
+    "min" : 8.0,
+    "max" : 12.0,
+    "sum" : 102.0,
+    "count" : 6,
+    "avg" : 17.0
+  }, {
+    "dateModification" : "2015-01-29T18:00:00Z",
+    "min" : 8.0,
+    "max" : 12.0,
+    "sum" : 102.0,
+    "count" : 6,
+    "avg" : 17.0
+  }, {
+    "dateModification" : "2015-01-29T19:00:00Z",
+    "min" : 8.0,
+    "max" : 12.0,
+    "sum" : 102.0,
+    "count" : 6,
+    "avg" : 17.0
+  }, {
+    "dateModification" : "2015-01-29T20:00:00Z",
+    "min" : 8.0,
+    "max" : 12.0,
+    "sum" : 102.0,
+    "count" : 6,
+    "avg" : 17.0
+  }, {
+    "dateModification" : "2015-01-29T21:00:00Z",
+    "min" : 8.0,
+    "max" : 12.0,
+    "sum" : 102.0,
+    "count" : 6,
+    "avg" : 17.0
+  }, {
+    "dateModification" : "2015-01-29T22:00:00Z",
+    "min" : 8.0,
+    "max" : 12.0,
+    "sum" : 102.0,
+    "count" : 6,
+    "avg" : 17.0
+  }, {
+    "dateModification" : "2015-01-29T23:00:00Z",
+    "min" : 8.0,
+    "max" : 12.0,
+    "sum" : 102.0,
+    "count" : 6,
+    "avg" : 17.0
+  } ],
+  "nextResults" : "",
+  "href" : "/newton-datastore-web/v1/ndr?idDevice=5077af18-b8f0-4388-8cd2-20e8590f3d32&idUtilisateur=test&startDate=2015-01-29T00:00:00Z&endDate=2015-01-29T23:55:00Z&typeBucket=hour&count=1000"
+}

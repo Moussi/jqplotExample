@@ -1,0 +1,87 @@
+<html>
+<head>
+   <title>jQplot</title>
+
+   <link rel="stylesheet" type="text/css" href="css/jquery.jqplot.min.css">
+   <link rel="stylesheet" type="text/css" href="css/site.css">
+   
+   <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+   <script type="text/javascript" src="js/jquery.jqplot.min.js"></script>   
+   <script type="text/javascript" src="js/jqplot.dateAxisRenderer.js"></script>  
+</head>
+
+<body>
+   <select id="bucketSlct">
+      <option value="10 minutes">By 10 Minutes</option>
+      <option value="1 hour">By 1 Hour</option>
+      <option value="1 day">By Day</option>
+      <option value="1 week">By Week</option>
+      <option value="1 month">By Month</option>
+   </select>
+
+   <div class="example-plot" id="plotContainerDiv"></div>
+
+   <script type="text/javascript">      
+      $(document).ready(function(){                  
+         //VARIABLES
+         var _myPlot = null;//Plot Variable         
+         var _plotContainerId = "plotContainerDiv";
+         var _selectionId = "bucketSlct";
+
+         //Fake WebService URL 
+         var _WebSvcUrl = "data/jsonFileMn.json"; 
+         // You must execute this WebProject in a HttpServer (ex: WampServer, Apache, ...)         
+         
+         //Consume WebService with jQuery AJAX
+         $.ajax({ 
+            type: "GET",
+            dataType: "json",
+			url: _WebSvcUrl,
+			crossDomain:true,
+		   success: function(data){
+               //on success: we render the plot and return the Plot object 
+			   _myPlot = renderPlot(_plotContainerId, loadPlotData(data),"10 minutes");
+               //Bind the Selection Change Event
+               bindSelectionChange(_myPlot, _plotContainerId, _selectionId, data)
+            }
+         });
+
+         //METHODS
+         //Extract, Format and Load data for the Plot
+         function loadPlotData(jsonWsResponse){
+            var jqplotObj = [];
+            for(i=0;i<jsonWsResponse.results.length;i++)
+            {
+               jqplotObj.push([new Date(jsonWsResponse.results[i].dateModification),jsonWsResponse.results[i].avg]);      
+            }
+            return jqplotObj;    
+         }
+     
+        //Render Plot
+        function renderPlot(plotContainerId, jqplotData, tickInterval)
+        {            
+          var plot = $.jqplot(plotContainerId, [jqplotData], {
+              title:'NDR Bucket Demo '+tickInterval, 
+              gridPadding:{right:35},
+              axes:{
+                xaxis:{
+                  renderer:$.jqplot.DateAxisRenderer, 
+                  tickOptions:{formatString:'%b %#d, %y'},          
+                  tickInterval: tickInterval            
+                }
+              }      
+          }); 
+          return plot;          
+        }     
+
+        //Handle Select Change
+        function bindSelectionChange(plot, plotContainerId, selectionId, jqplotData){      
+          $("#"+selectionId).change(function(){               
+              $("#"+plotContainerId).empty();
+              plot = renderPlot(plotContainerId, loadPlotData(jqplotData),$(this).val());
+          });
+        }
+  });
+</script>
+</body>
+</html>

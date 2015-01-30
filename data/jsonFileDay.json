@@ -1,0 +1,12 @@
+{
+  "results" : [ {
+    "dateModification" : "2015-01-29T00:00:00Z",
+    "min" : 1.0,
+    "max" : 30.0,
+    "sum" : 1469.0,
+    "count" : 87,
+    "avg" : 16.885057
+  } ],
+  "nextResults" : "",
+  "href" : "/newton-datastore-web/v1/ndr?idDevice=5077af18-b8f0-4388-8cd2-20e8590f3d32&idUtilisateur=test&startDate=2015-01-29T00:00:00Z&endDate=2015-01-29T23:55:00Z&typeBucket=day&count=1000"
+}
